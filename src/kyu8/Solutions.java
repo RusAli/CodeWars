@@ -1,6 +1,6 @@
 package kyu8;
 
-public class Main {
+public class Solutions {
 
 //  1)
 //  You Can't Code Under Pressure #1
@@ -204,28 +204,7 @@ public class Main {
   }
 
 */
-  public class Fighter {
-    public String name;
-    public int health, damagePerAttack;
-
-    public Fighter(String name, int health, int damagePerAttack) {
-      this.name = name;
-      this.health = health;
-      this.damagePerAttack = damagePerAttack;
-    }
-  }
-
-  public static String declareWinner(Fighter fighter1, Fighter fighter2, String firstAttacker) {
-    if (!fighter1.name.equals(firstAttacker)) {
-      return declareWinner(fighter2, fighter1, firstAttacker);
-    }
-
-    fighter2.health -= fighter1.damagePerAttack;
-    if (fighter2.health <= 0) {
-      return firstAttacker;
-    }
-    return declareWinner(fighter2, fighter1, fighter2.name);
-  }
+//TODO : 7)
 
 
 //  8)
@@ -259,41 +238,167 @@ public class Main {
     }
   }
 
-  //  9)
+//  9)
+//  Abbreviate a Two Word Name
+//  https://www.codewars.com/kata/57eadb7ecd143f4c9c0000a3/train/java
 
+/*
+  Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
+  The output should be two capital letters with a dot separating them.
+  It should look like this:
 
+  Sam Harris => S.H
+  patrick feeney => P.F
 
+*/
 
+  public static String abbrevName(String name) {
+    name = name.toUpperCase();
 
+    String[] names = name.split(" ");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    return names[0].charAt(0)+"."+names[1].charAt(0);
   }
+
+//  10)
+// Triple Trouble
+//  https://www.codewars.com/kata/5704aea738428f4d30000914/train/java
+
+/*
+
+  Create a function that will return a string that combines all of the letters of the three inputed strings in groups.
+  Taking the first letter of all of the inputs and grouping them next to each other.
+  Do this for every letter, see example below!
+
+  E.g. Input: "aa", "bb" , "cc" => Output: "abcabc"
+
+  Note: You can expect all of the inputs to be the same length.
+*/
+
+
+  public static String tripleTrouble(String one, String two, String three) {
+    String result = "";
+    for (int i = 0; i < one.length(); i++) {
+      result += ""+ one.charAt(i)+two.charAt(i)+three.charAt(i);
+    }
+    return result;
+  }
+
+//  11)
+//  The Feast of Many Beasts
+//  https://www.codewars.com/kata/5aa736a455f906981800360d/train/java
+/*
+
+  All of the animals are having a feast! Each animal is bringing one dish.
+  There is just one rule: the dish must start and end with the same letters as the animal's name.
+  For example, the great blue heron is bringing garlic naan and the chickadee is bringing chocolate cake.
+
+  Write a function feast that takes the animal's name and dish as arguments and
+  returns true or false to indicate whether the beast is allowed to bring the dish to the feast.
+
+  Assume that beast and dish are always lowercase strings, and that each has at least two letters.
+  beast and dish may contain hyphens and spaces, but these will not appear at the beginning or end of the string.
+  They will not contain numerals.
+
+*/
+
+  public static boolean feast(String beast, String dish) {
+
+    if(beast.charAt(0) == dish.charAt(0) && beast.charAt(beast.length()-1) == dish.charAt(dish.length()-1)){
+      return true;
+    }
+    return false;
+  }
+
+//  12)
+//  Find the position!
+//  https://www.codewars.com/kata/5808e2006b65bff35500008f/train/java
+/*
+
+  When provided with a letter, return its position in the alphabet.
+
+          Input :: "a"
+
+  Ouput :: "Position of alphabet: 1"
+
+  This kata is meant for beginners. Rank and upvote to bring it out of beta
+*/
+
+  public static String position(char alphabet) {
+    String alph = "abcdefghijklmnopqrstuvwxyz";
+    String mes = "Position of alphabet: ";
+
+    return mes + (alph.indexOf(alphabet)+1);
+  }
+
+//  13)
+//  Array plus array
+//  https://www.codewars.com/kata/5a2be17aee1aaefe2a000151/train/java
+/*
+
+  I'm new to coding and now I want to get the sum of two arrays...actually the sum of all their elements.
+  I'll appreciate for your help.
+
+  P.S. Each array includes only integer numbers. Output is a number too.
+*/
+
+  public static int arrayPlusArray(int[] arr1, int[] arr2) {
+    int sum = 0;
+    for (int i = 0; i < arr1.length; i++) {
+      sum += arr1[i]+arr2[i];
+    }
+    return sum;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
