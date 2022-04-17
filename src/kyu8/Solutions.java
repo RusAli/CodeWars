@@ -350,6 +350,113 @@ public class Solutions {
     return sum;
   }
 
+//  14)
+//  Convert boolean values to strings 'Yes' or 'No'.
+// https://www.codewars.com/kata/53369039d7ab3ac506000467/train/java
+
+/*
+Complete the method that takes a boolean value and return a "Yes" string for true,
+  or a "No" string for false.
+*/
+  public static String boolToWord(boolean b) {
+  if(b == true){
+    return "Yes";
+  }
+  else{
+    return "No";
+  }
+}
+
+//  15)
+//  Basic Mathematical Operations
+//  https://www.codewars.com/kata/57356c55867b9b7a60000bd7/train/java
+
+/*
+  Your task is to create a function that does four basic mathematical operations.
+
+  The function should take three arguments - operation(string/char), value1(number), value2(number).
+  The function should return result of numbers after applying the chosen operation.
+
+  Examples(Operator, value1, value2) --> output
+          ('+', 4, 7) --> 11
+          ('-', 15, 18) --> -3
+          ('*', 5, 5) --> 25
+          ('/', 49, 7) --> 7
+
+*/
+
+  public static Integer basicMath(String op, int v1, int v2) {
+    int result = 0;
+    switch (op){
+      case "+" :
+        result = v1+v2;
+        break;
+      case "-" :
+        result =  v1-v2;
+        break;
+      case "*" :
+        result = v1 * v2;
+        break;
+      case "/" :
+        result = v1 / v2;
+        break;
+    }
+    return result;
+
+  }
+
+//  16)
+////  Convert a string to an array
+////  https://www.codewars.com/kata/57e76bc428d6fbc2d500036d/train/java
+
+  public static String[] stringToArray(String s) {
+    String[] arr = s.split(" ");
+    return arr;
+  }
+
+
+//  17)
+//  Reversed sequence
+//  https://www.codewars.com/kata/5a00e05cc374cb34d100000d/train/java
+
+  public static int[] reverse(int n){
+
+    int[] arr = new int[n];
+    for (int i = 0; i < arr.length; i++) {
+      arr[i] = n;
+      n--;
+    }
+    return arr;
+  }
+
+
+//  18)
+//  Correct the mistakes of the character recognition software
+//  https://www.codewars.com/kata/577bd026df78c19bca0002c0/train/java
+/*
+
+  Character recognition software is widely used to digitise printed texts.
+  Thus the texts can be edited, searched and stored on a computer.
+
+  When documents (especially pretty old ones written with a typewriter),
+  are digitised character recognition softwares often make mistakes.
+
+  Your task is correct the errors in the digitised text. You only have to handle the following mistakes:
+
+  S is misinterpreted as 5
+  O is misinterpreted as 0
+  I is misinterpreted as 1
+  The test cases contain numbers only by mistake.
+
+*/
+  public static String correct(String string) {
+
+  String result = string.replace('5','S').replace('0','O').replace('1','I');
+  return result;
+
+}
+
+
 
 
 
