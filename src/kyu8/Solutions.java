@@ -540,14 +540,30 @@ Complete the method that takes a boolean value and return a "Yes" string for tru
           -34: 34
 */
 
-  public class Kata
-  {
-    public static int opposite(int number)
-    {
-      return number *=(-1);
+//  public class Kata
+//  {
+//    public static int opposite(int number)
+//    {
+//      return number *=(-1);
+//    }
+//  }
+
+//  23)
+//  Reversed Strings
+//  https://www.codewars.com/kata/5168bb5dfe9a00b126000018/train/java
+
+/*
+  Complete the solution so that it reverses the string passed into it.
+
+          'world'  =>  'dlrow'
+          'word'   =>  'drow'
+*/
+
+  public class Kata {
+    public static String solution(String str) {
+      return new StringBuilder(str).reverse().toString();
     }
   }
-
 
 
 
