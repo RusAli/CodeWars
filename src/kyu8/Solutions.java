@@ -559,7 +559,7 @@ Complete the method that takes a boolean value and return a "Yes" string for tru
           'word'   =>  'drow'
 */
 
-  public class Kata {
+  public class Kata2 {
     public static String solution(String str) {
       return new StringBuilder(str).reverse().toString();
     }
