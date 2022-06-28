@@ -6,7 +6,7 @@ public class Solutions {
 //  You Can't Code Under Pressure #1
 //  https://www.codewars.com/kata/53ee5429ba190077850011d4/train/java
 
- /* Code as fast as you can! You need to double the integer and return it.*/
+  /* Code as fast as you can! You need to double the integer and return it.*/
 
   public static int doubleInteger(int i) {
     i *= 2;
@@ -47,11 +47,11 @@ public class Solutions {
 
 */
 
-//  4)
+  //  4)
   public static int findSmallestInt(int[] args) {
     int min = args[0];
-    for(int i = 1; i < args.length; i++){
-      if ( args[i] < min){
+    for (int i = 1; i < args.length; i++) {
+      if (args[i] < min) {
         min = args[i];
       }
     }
@@ -72,7 +72,7 @@ public class Solutions {
 
   public static String countingSheep(int num) {
     String result = "";
-    for( int i = 1; i <= num; i++){
+    for (int i = 1; i <= num; i++) {
       result += i + " sheep...";
     }
     return result;
@@ -92,7 +92,7 @@ public class Solutions {
   initialise the side to 0.
 */
 
-  public class Cube{
+  public class Cube {
     private int Side;
 
     public int getSide() {
@@ -129,7 +129,7 @@ public class Solutions {
           b.getSurfaceArea() // -> 88
   */
 
-  public class Block{
+  public class Block {
 
     int width;
     int length;
@@ -158,13 +158,13 @@ public class Solutions {
     }
 
 
-    public Block(int[] block){
+    public Block(int[] block) {
       width = block[0];
       length = block[1];
       height = block[2];
 
-      volume = width*length*height;
-      surfaceArea = 2 * (width*length + width*height + length*height);
+      volume = width * length * height;
+      surfaceArea = 2 * (width * length + width * height + length * height);
 
     }
   }
@@ -226,14 +226,14 @@ public class Solutions {
 
   public static boolean betterThanAverage(int[] classPoints, int yourPoints) {
 
-    int sum =0;
-    for(int i =0; i < classPoints.length; i++){
+    int sum = 0;
+    for (int i = 0; i < classPoints.length; i++) {
       sum += classPoints[i];
     }
-    int avg = sum/classPoints.length;
-    if(avg > yourPoints){
+    int avg = sum / classPoints.length;
+    if (avg > yourPoints) {
       return false;
-    }else {
+    } else {
       return true;
     }
   }
@@ -257,7 +257,7 @@ public class Solutions {
 
     String[] names = name.split(" ");
 
-    return names[0].charAt(0)+"."+names[1].charAt(0);
+    return names[0].charAt(0) + "." + names[1].charAt(0);
   }
 
 //  10)
@@ -279,7 +279,7 @@ public class Solutions {
   public static String tripleTrouble(String one, String two, String three) {
     String result = "";
     for (int i = 0; i < one.length(); i++) {
-      result += ""+ one.charAt(i)+two.charAt(i)+three.charAt(i);
+      result += "" + one.charAt(i) + two.charAt(i) + three.charAt(i);
     }
     return result;
   }
@@ -304,7 +304,7 @@ public class Solutions {
 
   public static boolean feast(String beast, String dish) {
 
-    if(beast.charAt(0) == dish.charAt(0) && beast.charAt(beast.length()-1) == dish.charAt(dish.length()-1)){
+    if (beast.charAt(0) == dish.charAt(0) && beast.charAt(beast.length() - 1) == dish.charAt(dish.length() - 1)) {
       return true;
     }
     return false;
@@ -328,7 +328,7 @@ public class Solutions {
     String alph = "abcdefghijklmnopqrstuvwxyz";
     String mes = "Position of alphabet: ";
 
-    return mes + (alph.indexOf(alphabet)+1);
+    return mes + (alph.indexOf(alphabet) + 1);
   }
 
 //  13)
@@ -345,7 +345,7 @@ public class Solutions {
   public static int arrayPlusArray(int[] arr1, int[] arr2) {
     int sum = 0;
     for (int i = 0; i < arr1.length; i++) {
-      sum += arr1[i]+arr2[i];
+      sum += arr1[i] + arr2[i];
     }
     return sum;
   }
@@ -354,18 +354,17 @@ public class Solutions {
 //  Convert boolean values to strings 'Yes' or 'No'.
 // https://www.codewars.com/kata/53369039d7ab3ac506000467/train/java
 
-/*
-Complete the method that takes a boolean value and return a "Yes" string for true,
-  or a "No" string for false.
-*/
+  /*
+  Complete the method that takes a boolean value and return a "Yes" string for true,
+    or a "No" string for false.
+  */
   public static String boolToWord(boolean b) {
-  if(b == true){
-    return "Yes";
+    if (b == true) {
+      return "Yes";
+    } else {
+      return "No";
+    }
   }
-  else{
-    return "No";
-  }
-}
 
 //  15)
 //  Basic Mathematical Operations
@@ -387,17 +386,17 @@ Complete the method that takes a boolean value and return a "Yes" string for tru
 
   public static Integer basicMath(String op, int v1, int v2) {
     int result = 0;
-    switch (op){
-      case "+" :
-        result = v1+v2;
+    switch (op) {
+      case "+":
+        result = v1 + v2;
         break;
-      case "-" :
-        result =  v1-v2;
+      case "-":
+        result = v1 - v2;
         break;
-      case "*" :
+      case "*":
         result = v1 * v2;
         break;
-      case "/" :
+      case "/":
         result = v1 / v2;
         break;
     }
@@ -419,7 +418,7 @@ Complete the method that takes a boolean value and return a "Yes" string for tru
 //  Reversed sequence
 //  https://www.codewars.com/kata/5a00e05cc374cb34d100000d/train/java
 
-  public static int[] reverse(int n){
+  public static int[] reverse(int n) {
 
     int[] arr = new int[n];
     for (int i = 0; i < arr.length; i++) {
@@ -430,7 +429,7 @@ Complete the method that takes a boolean value and return a "Yes" string for tru
   }
 
 
-//  18)
+  //  18)
 //  Correct the mistakes of the character recognition software
 //  https://www.codewars.com/kata/577bd026df78c19bca0002c0/train/java
 /*
@@ -451,24 +450,24 @@ Complete the method that takes a boolean value and return a "Yes" string for tru
 */
   public static String correct(String string) {
 
-  String result = string.replace('5','S').replace('0','O').replace('1','I');
-  return result;
+    String result = string.replace('5', 'S').replace('0', 'O').replace('1', 'I');
+    return result;
 
-}
+  }
 
 //  19)
 //  Even or Odd
 //  https://www.codewars.com/kata/53da3dbb4a5168369a0000fe/train/java
 
- /*
-  Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
+  /*
+   Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
 
-  */
+   */
   public class EvenOrOdd {
     public static String even_or_odd(int number) {
-      if(number % 2 == 0 ){
+      if (number % 2 == 0) {
         return "Even";
-      }else {
+      } else {
         return "Odd";
       }
 
@@ -486,16 +485,16 @@ Complete the method that takes a boolean value and return a "Yes" string for tru
   Note: if there is nothing to sum, the sum is default to 0.
 */
 
-  public class Positive{
+  public class Positive {
 
-    public static int sum(int[] arr){
+    public static int sum(int[] arr) {
 
-      if(arr != null && arr.length > 0){
+      if (arr != null && arr.length > 0) {
 
         int sum = 0;
         for (int i = 0; i < arr.length; i++) {
-          if(arr[i] > 0){
-            sum +=arr[i];
+          if (arr[i] > 0) {
+            sum += arr[i];
           }
         }
         return sum;
@@ -564,6 +563,27 @@ Complete the method that takes a boolean value and return a "Yes" string for tru
       return new StringBuilder(str).reverse().toString();
     }
   }
+
+
+  /**
+   * 24)
+   * Remove First and Last Character
+   * https://www.codewars.com/kata/56bc28ad5bdaeb48760009b0/train/java
+   *
+   * It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string.
+   * You're given one parameter, the original string. You don't have to worry with strings with less than two characters.
+   */
+
+  public class RemoveChars {
+    public static String remove(String str) {
+
+      String res = new StringBuilder(str).deleteCharAt(0).deleteCharAt(str.length()-2).toString();
+    }
+  }
+
+
+
+}
 
 
 
