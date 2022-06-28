@@ -577,7 +577,7 @@ public class Solutions {
   public class RemoveChars {
     public static String remove(String str) {
 
-      String res = new StringBuilder(str).deleteCharAt(0).deleteCharAt(str.length()-2).toString();
+      return new StringBuilder(str).deleteCharAt(0).deleteCharAt(str.length() - 2).toString();
     }
   }
 
