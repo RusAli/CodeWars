@@ -22,6 +22,34 @@ public class Solutions {
     return pin.matches("\\d{4} | \\d{6}");
   }
 
+  /**
+   * 2)
+   * Vowel Count
+   * https://www.codewars.com/kata/54ff3102c1bad923760001f3/train/java
+   *
+   * Return the number (count) of vowels in the given string.
+   *
+   * We will consider a, e, i, o, u as vowels for this Kata (but not y).
+   *
+   * The input string will only consist of lower case letters and/or spaces.
+   */
+
+  public static int getCount(String str) {
+    if(str.length() !=0 && str != null){
+      int count = 0;
+      for (int i = 0; i < str.length(); i++) {
+        char ch = str.charAt(i);
+        if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u'){
+          count++;
+        }
+      }
+
+      return count;
+    }
+
+    return 0;
+  }
+
 
 
 
