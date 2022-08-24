@@ -72,6 +72,34 @@ public class Solutions {
     return res;
   }
 
+  /**
+   * 4)
+   * Highest and Lowest
+   * https://www.codewars.com/kata/554b4ac871d6813a03000035/train/java
+   *
+   * In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
+   *
+   * Examples
+   * highAndLow("1 2 3 4 5")  // return "5 1"
+   * highAndLow("1 2 -3 4 5") // return "5 -3"
+   * highAndLow("1 9 3 4 -5") // return "9 -5"
+   */
+
+  public static String highAndLow(String numbers) {
+    String[] nums = numbers.split("\s");
+    int max = Integer.parseInt(nums[0]);
+    int min = Integer.parseInt(nums[0]);
+
+    for(int i = 1; i < nums.length; i++){
+      max = Math.max(max,Integer.parseInt(nums[i]));
+      max = Math.min(min,Integer.parseInt(nums[i]));
+    }
+
+    return max + " " + min;
+
+  }
+
+
 
 
 
